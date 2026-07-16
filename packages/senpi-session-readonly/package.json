@@ -1,0 +1,1 @@
+{"name":"@code-yeongyu/senpi-coding-agent","private":true,"version":"2026.7.14-3","type":"module","exports":{"./session-readonly":{"types":"./src/session-readonly.ts","import":"./src/session-readonly.ts"}}}

@@ -1,0 +1,28 @@
+{
+  "name": "omonative",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "cd apps/gateway && bun run dev",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "bun test",
+    "qa:browser": "bun tests/browser-qa.ts",
+    "build": "cd apps/web && bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "playwright": "^1.61.1",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-plugin-pwa": "latest"
+  },
+  "dependencies": {
+    "@hono/node-server": "latest",
+    "hono": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}

@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1021292A230D046BC8AA1E90 /* OmonativeShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B7117DBC5881698E8FEE2 /* OmonativeShared.swift */; };
+		1A00040DECA39F558EB6824E /* OmonativeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF0BE1DF8495F47E3FF330 /* OmonativeApp.swift */; };
+		38AC5D5F0A1FD0C0DA942BA6 /* OmonativeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF0BE1DF8495F47E3FF330 /* OmonativeApp.swift */; };
+		39814260FD93CF242AF6F693 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77D379AB01703CC8E9DE66 /* Foundation.framework */; };
+		940D8B44F970A9683FA2CCF5 /* OmonativeShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B7117DBC5881698E8FEE2 /* OmonativeShared.swift */; };
+		A4B79316EFA00F373EB2DFE4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E9C4C41D49678B3693E97 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1434E5031B61CCC337ACDAC3 /* verify-signing.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "verify-signing.sh"; sourceTree = "<group>"; };
+		1E7E9C4C41D49678B3693E97 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		40AF0BE1DF8495F47E3FF330 /* OmonativeApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OmonativeApp.swift; sourceTree = "<group>"; };
+		47E6E093111B2105A84A9CB9 /* iOS.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
+		7D1AC6C5CF14BEDD1EECE23C /* OmonativeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmonativeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC77D379AB01703CC8E9DE66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D211A008AD1BD52BDFF8809F /* Mac.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Mac.entitlements; sourceTree = "<group>"; };
+		D52B7117DBC5881698E8FEE2 /* OmonativeShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OmonativeShared.swift; sourceTree = "<group>"; };
+		ED4A4E70492CDA4CD2D01B50 /* OmonativeMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmonativeMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F746C6E4EA5A35E5DDDAAAFB /* build-sidecar.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "build-sidecar.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AF99AE27F5B6DCEA8445AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39814260FD93CF242AF6F693 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91AFB38177CE19A75B9DE757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B79316EFA00F373EB2DFE4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089A1FA543A22C55578C361F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D52B7117DBC5881698E8FEE2 /* OmonativeShared.swift */,
+			);
+			name = Shared;
+			path = Shared/Sources/OmonativeShared;
+			sourceTree = "<group>";
+		};
+		3D229185EFBF91F7E056C56F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				937C5B130FA3B85D80ADC5FC /* OS X */,
+				4EFFF3699945F98D0FB5BBCF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EFFF3699945F98D0FB5BBCF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BC77D379AB01703CC8E9DE66 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		55FFBD0C73F8FF138E3C87CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED4A4E70492CDA4CD2D01B50 /* OmonativeMac.app */,
+				7D1AC6C5CF14BEDD1EECE23C /* OmonativeIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72A6AC4AB24C28F40F8A354A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				40AF0BE1DF8495F47E3FF330 /* OmonativeApp.swift */,
+				D211A008AD1BD52BDFF8809F /* Mac.entitlements */,
+				47E6E093111B2105A84A9CB9 /* iOS.entitlements */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		81116DDBE52D445154F00E05 = {
+			isa = PBXGroup;
+			children = (
+				55FFBD0C73F8FF138E3C87CB /* Products */,
+				3D229185EFBF91F7E056C56F /* Frameworks */,
+				971BC1DCE661315119486DB0 /* Apple */,
+			);
+			sourceTree = "<group>";
+		};
+		937C5B130FA3B85D80ADC5FC /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				1E7E9C4C41D49678B3693E97 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		971BC1DCE661315119486DB0 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				72A6AC4AB24C28F40F8A354A /* App */,
+				089A1FA543A22C55578C361F /* Shared */,
+				C90774BF99CED0C25B79EE2D /* scripts */,
+			);
+			name = Apple;
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		C90774BF99CED0C25B79EE2D /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				F746C6E4EA5A35E5DDDAAAFB /* build-sidecar.sh */,
+				1434E5031B61CCC337ACDAC3 /* verify-signing.sh */,
+			);
+			name = scripts;
+			path = Apple/scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		860C3FFAEB48FC849E8916E4 /* OmonativeMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FAFF844149190FBC13971A5 /* Build configuration list for PBXNativeTarget "OmonativeMac" */;
+			buildPhases = (
+				A73BA546D34E02BADE501F5A /* Sources */,
+				91AFB38177CE19A75B9DE757 /* Frameworks */,
+				D89B4ADCC9A85AE1ED61FE01 /* Resources */,
+				60F5A2A6736866AC3473B9ED /* Build Bun gateway */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OmonativeMac;
+			productName = OmonativeMac;
+			productReference = ED4A4E70492CDA4CD2D01B50 /* OmonativeMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8740F71E9815BC1891D959A4 /* OmonativeIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27EB7D471A6B501D1BEA8981 /* Build configuration list for PBXNativeTarget "OmonativeIOS" */;
+			buildPhases = (
+				76D223BCE8DE14B3D568E0DD /* Sources */,
+				1AF99AE27F5B6DCEA8445AB9 /* Frameworks */,
+				F0458E1461C5DE0CCA5ABD9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OmonativeIOS;
+			productName = OmonativeIOS;
+			productReference = 7D1AC6C5CF14BEDD1EECE23C /* OmonativeIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E1A8200E7560A6B77B6FE57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = B2E39831B370BDF9D29C6A8F /* Build configuration list for PBXProject "Omonative" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81116DDBE52D445154F00E05;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 55FFBD0C73F8FF138E3C87CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				860C3FFAEB48FC849E8916E4 /* OmonativeMac */,
+				8740F71E9815BC1891D959A4 /* OmonativeIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D89B4ADCC9A85AE1ED61FE01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0458E1461C5DE0CCA5ABD9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60F5A2A6736866AC3473B9ED /* Build Bun gateway */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/apps/gateway/src/index.ts",
+			);
+			name = "Build Bun gateway";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/omonative-gateway",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Apple/scripts/build-sidecar.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76D223BCE8DE14B3D568E0DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A00040DECA39F558EB6824E /* OmonativeApp.swift in Sources */,
+				940D8B44F970A9683FA2CCF5 /* OmonativeShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73BA546D34E02BADE501F5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38AC5D5F0A1FD0C0DA942BA6 /* OmonativeApp.swift in Sources */,
+				1021292A230D046BC8AA1E90 /* OmonativeShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1C4496D52F1ED1E49B28A0FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2807218B246C8970CCAEDA13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Apple/App/Mac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U48VX8D6WT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Omonative;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omonative.mac;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		3FFC9F7AFB572C0458FC25CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Apple/App/iOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U48VX8D6WT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Omonative;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omonative.ios;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F65A95FA72AE9D2D7E4289A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Apple/App/iOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U48VX8D6WT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Omonative;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omonative.ios;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A853024806C8D937FEEC6064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B553BFDE00C71B10411C6182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Apple/App/Mac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U48VX8D6WT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Omonative;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omonative.mac;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27EB7D471A6B501D1BEA8981 /* Build configuration list for PBXNativeTarget "OmonativeIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F65A95FA72AE9D2D7E4289A /* Release */,
+				3FFC9F7AFB572C0458FC25CE /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FAFF844149190FBC13971A5 /* Build configuration list for PBXNativeTarget "OmonativeMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2807218B246C8970CCAEDA13 /* Release */,
+				B553BFDE00C71B10411C6182 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2E39831B370BDF9D29C6A8F /* Build configuration list for PBXProject "Omonative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C4496D52F1ED1E49B28A0FD /* Debug */,
+				A853024806C8D937FEEC6064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E1A8200E7560A6B77B6FE57 /* Project object */;
+}

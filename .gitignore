@@ -1,0 +1,14 @@
+node_modules/
+apps/web/dist/
+.omo/
+*.sqlite
+*.sqlite.cursor-secret
+.env
+.env.*
+Apple/Shared/.build/
+Apple/.swiftpm/
+DerivedData/
+.build/
+*.xcresult
+*.xcarchive
+*.dSYM/

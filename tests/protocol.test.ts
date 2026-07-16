@@ -1,0 +1,2 @@
+import {expect,test} from 'bun:test'; import {parseSse,signCursor,verifyCursor} from '../packages/protocol/src';
+test('cursor is signed and SSE preserves ordered frames', async()=>{ const cursor=await signCursor({sessionId:'s1',after:2},'test'); expect(await verifyCursor(cursor,'test')).toEqual({sessionId:'s1',after:2}); expect(await verifyCursor(`${cursor}x`,'test')).toBeNull(); expect(parseSse('event: update\ndata: {"id":3}\n\nevent: complete\ndata: {}\n')).toEqual([{event:'update',data:'{"id":3}'},{event:'complete',data:'{}'}]); });
