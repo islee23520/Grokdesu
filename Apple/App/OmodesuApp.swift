@@ -3,7 +3,7 @@ import SwiftUI
 import AppKit
 import Darwin
 
-@MainActor final class OmonativeAppDelegate: NSObject, NSApplicationDelegate {
+@MainActor final class OmodesuAppDelegate: NSObject, NSApplicationDelegate {
  var stopGateway: (() -> Void)?
 
  func applicationWillTerminate(_ notification: Notification) {
@@ -12,10 +12,10 @@ import Darwin
 }
 #endif
 
-@main struct OmonativeApp: App {
+@main struct OmodesuApp: App {
  @StateObject private var model = AppModel()
  #if os(macOS)
- @NSApplicationDelegateAdaptor(OmonativeAppDelegate.self) private var appDelegate
+ @NSApplicationDelegateAdaptor(OmodesuAppDelegate.self) private var appDelegate
  #endif
 
  var body: some Scene {
@@ -144,11 +144,11 @@ import Darwin
  }
 
  private func startLocalGateway() async {
-  guard let executable = Bundle.main.url(forResource: "omonative-gateway", withExtension: nil) else {
+  guard let executable = Bundle.main.url(forResource: "omodesu-gateway", withExtension: nil) else {
    status = "Bundled gateway unavailable"
    return
   }
-  let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appending(path: "Omonative")
+  let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appending(path: "Omodesu")
   do {
    try FileManager.default.createDirectory(at: support, withIntermediateDirectories: true)
    let process = Process()
@@ -156,9 +156,9 @@ import Darwin
    process.environment = ProcessInfo.processInfo.environment.merging([
     "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:" + (ProcessInfo.processInfo.environment["PATH"] ?? ""),
     "PORT": "8787",
-    "OMONATIVE_HOST": "127.0.0.1",
-    "OMONATIVE_DB_PATH": support.appending(path: "control.sqlite").path,
-    "OMONATIVE_STATIC_ROOT": ""
+    "OMODESU_HOST": "127.0.0.1",
+    "OMODESU_DB_PATH": support.appending(path: "control.sqlite").path,
+    "OMODESU_STATIC_ROOT": ""
    ]) { $1 }
    process.standardOutput = Pipe()
    process.standardError = Pipe()
@@ -223,12 +223,12 @@ struct RootView: View {
    List(model.sessions) { session in
     Button { Task { await model.select(session) } } label: { SessionRow(session: session) }
    }
-   .navigationTitle("Omonative")
+   .navigationTitle("Omodesu")
   } detail: {
    ConversationView(model: model)
   }
   #else
-  NavigationStack { ConversationView(model: model).navigationTitle("Omonative") }
+  NavigationStack { ConversationView(model: model).navigationTitle("Omodesu") }
   #endif
  }
 }

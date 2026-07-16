@@ -14,14 +14,14 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "860C3FFAEB48FC849E8916E4"
-               BuildableName = "OmonativeMac.app"
-               BlueprintName = "OmonativeMac"
-               ReferencedContainer = "container:Omonative.xcodeproj">
+               BlueprintIdentifier = "06971FD894FF5DBAB7ADE74C"
+               BuildableName = "OmodesuIOS.app"
+               BlueprintName = "OmodesuIOS"
+               ReferencedContainer = "container:Omodesu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
-   <PostActions><ExecutionAction ActionType="Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction"><ActionContent title="Verify signing identity" scriptText="&quot;/Users/ilseoblee/workspace/ULW/omonative/Apple/scripts/verify-signing.sh&quot; &quot;$(find ~/Library/Developer/Xcode/DerivedData/Omonative-* -path &apos;*Build/Products/Debug/OmonativeMac.app&apos; -print -quit)&quot;"><EnvironmentBuildable><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="" BuildableName="" BlueprintName="" ReferencedContainer="container:Omonative.xcodeproj"></BuildableReference></EnvironmentBuildable></ActionContent></ExecutionAction></PostActions></BuildAction>
+   </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -30,10 +30,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "860C3FFAEB48FC849E8916E4"
-            BuildableName = "OmonativeMac.app"
-            BlueprintName = "OmonativeMac"
-            ReferencedContainer = "container:Omonative.xcodeproj">
+            BlueprintIdentifier = "06971FD894FF5DBAB7ADE74C"
+            BuildableName = "OmodesuIOS.app"
+            BlueprintName = "OmodesuIOS"
+            ReferencedContainer = "container:Omodesu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -53,10 +53,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "860C3FFAEB48FC849E8916E4"
-            BuildableName = "OmonativeMac.app"
-            BlueprintName = "OmonativeMac"
-            ReferencedContainer = "container:Omonative.xcodeproj">
+            BlueprintIdentifier = "06971FD894FF5DBAB7ADE74C"
+            BuildableName = "OmodesuIOS.app"
+            BlueprintName = "OmodesuIOS"
+            ReferencedContainer = "container:Omodesu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -70,10 +70,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "860C3FFAEB48FC849E8916E4"
-            BuildableName = "OmonativeMac.app"
-            BlueprintName = "OmonativeMac"
-            ReferencedContainer = "container:Omonative.xcodeproj">
+            BlueprintIdentifier = "06971FD894FF5DBAB7ADE74C"
+            BuildableName = "OmodesuIOS.app"
+            BlueprintName = "OmodesuIOS"
+            ReferencedContainer = "container:Omodesu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

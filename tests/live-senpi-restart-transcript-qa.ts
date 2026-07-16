@@ -26,7 +26,7 @@ try {
     `assistant_REMOTE_OK=${remoteOk}`,
     'transcript_content=not recorded',
   ].join('\n');
-  await Bun.write('.omo/evidence/omonative/C3-control/senpi-restart-transcript.txt', `${evidence}\n`);
+  await Bun.write('.omo/evidence/omodesu/C3-control/senpi-restart-transcript.txt', `${evidence}\n`);
   if (!remoteOk) throw new Error('No persisted Senpi transcript contained the expected assistant marker');
 } finally {
   await adapter.close();

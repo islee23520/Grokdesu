@@ -1,1 +1,1 @@
-{"name":"@omonative/gateway","private":true,"scripts":{"dev":"bun --watch src/index.ts","start":"bun src/index.ts"},"dependencies":{"@code-yeongyu/senpi-coding-agent":"workspace:*","@omonative/protocol":"workspace:*"}}
+{"name":"@omodesu/gateway","private":true,"scripts":{"dev":"bun --watch src/index.ts","start":"bun src/index.ts"},"dependencies":{"@code-yeongyu/senpi-coding-agent":"workspace:*","@omodesu/protocol":"workspace:*"}}

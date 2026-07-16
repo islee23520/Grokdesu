@@ -28,7 +28,7 @@ function peer(path: string): RpcPeer {
 }
 
 test('reads public archived message entries when cold thread/read has only fabricated empty user items', async () => {
-  const root = await mkdtemp(join(tmpdir(), 'omonative-senpi-sessions-'));
+  const root = await mkdtemp(join(tmpdir(), 'omodesu-senpi-sessions-'));
   const path = join(root, 'archived-thread.jsonl');
   await writeFile(path, archivedTranscript, 'utf8');
   const adapter = new SenpiAdapter({SENPI_CODING_AGENT_SESSION_DIR: root}, async () => peer(path));
@@ -43,8 +43,8 @@ test('reads public archived message entries when cold thread/read has only fabri
 });
 
 test('rejects provider-reported session paths outside the configured session root', async () => {
-  const root = await mkdtemp(join(tmpdir(), 'omonative-senpi-sessions-'));
-  const outside = await mkdtemp(join(tmpdir(), 'omonative-senpi-outside-'));
+  const root = await mkdtemp(join(tmpdir(), 'omodesu-senpi-sessions-'));
+  const outside = await mkdtemp(join(tmpdir(), 'omodesu-senpi-outside-'));
   const path = join(outside, 'archived-thread.jsonl');
   await writeFile(path, archivedTranscript, 'utf8');
   const adapter = new SenpiAdapter({SENPI_CODING_AGENT_SESSION_DIR: root}, async () => peer(path));
@@ -53,7 +53,7 @@ test('rejects provider-reported session paths outside the configured session roo
 });
 
 test('does not persist archived transcript content to a control database', async () => {
-  const root = await mkdtemp(join(tmpdir(), 'omonative-senpi-sessions-'));
+  const root = await mkdtemp(join(tmpdir(), 'omodesu-senpi-sessions-'));
   await mkdir(root, {recursive: true});
   const source = await Bun.file('apps/gateway/src/app.ts').text();
   expect(source).not.toContain('INSERT INTO transcript');

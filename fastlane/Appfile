@@ -1,0 +1,4 @@
+app_identifier("com.ilseoblee.omodesu.mac")
+app_identifier("com.ilseoblee.omodesu.ios")
+apple_id("ilseoblee@gmail.com")
+team_id("U48VX8D6WT")

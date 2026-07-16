@@ -1,4 +1,4 @@
-const DATABASE = 'omonative-device'; const STORE = 'tokens';
+const DATABASE = 'omodesu-device'; const STORE = 'tokens';
 export type DeviceToken = {token: string; tokenId: string; scopes: string[]};
 function database(): Promise<IDBDatabase> { return new Promise((resolve, reject) => { const request = indexedDB.open(DATABASE, 1); request.onupgradeneeded = () => request.result.createObjectStore(STORE); request.onsuccess = () => resolve(request.result); request.onerror = () => reject(request.error); }); }
 export async function loadToken(): Promise<DeviceToken | undefined> { const db = await database(); return new Promise((resolve, reject) => { const request = db.transaction(STORE).objectStore(STORE).get('current'); request.onsuccess = () => resolve(request.result); request.onerror = () => reject(request.error); }); }

@@ -1,0 +1,127 @@
+default_platform(:ios)
+
+# ── iOS ──────────────────────────────────────────────────────────────
+
+platform :ios do
+  desc "Run tests on iOS Simulator"
+  lane :test do
+    scan(
+      project: "Omodesu.xcodeproj",
+      scheme: "OmodesuIOS",
+      destination: "generic/platform=iOS Simulator",
+      code_signing_allowed: false,
+      clean: true
+    )
+  end
+
+  desc "Build iOS app for Simulator (no signing)"
+  lane :build_sim do
+    gym(
+      project: "Omodesu.xcodeproj",
+      scheme: "OmodesuIOS",
+      configuration: "Debug",
+      destination: "generic/platform=iOS Simulator",
+      skip_codesigning: true,
+      skip_archive: true,
+      export_method: "development",
+      output_directory: ".build/ios",
+      clean: true
+    )
+  end
+
+  desc "Build and sign iOS app for device (Development)"
+  lane :beta do
+    match(
+      type: "development",
+      app_identifier: "com.ilseoblee.omodesu.ios",
+      team_id: "U48VX8D6WT"
+    )
+
+    gym(
+      project: "Omodesu.xcodeproj",
+      scheme: "OmodesuIOS",
+      configuration: "Release",
+      destination: "generic/platform=iOS",
+      export_method: "development",
+      output_directory: ".build/ios",
+      clean: true,
+      include_bitcode: false
+    )
+  end
+
+  desc "Upload to TestFlight"
+  lane :tf do
+    beta
+
+    pilot(
+      app_identifier: "com.ilseoblee.omodesu.ios",
+      team_id: "U48VX8D6WT",
+      skip_waiting_for_build_processing: true
+    )
+  end
+end
+
+# ── macOS ────────────────────────────────────────────────────────────
+
+platform :macos do
+  desc "Build unsigned macOS app for local testing"
+  lane :build_local do
+    sh("xcodebuild -project Omodesu.xcodeproj -scheme OmodesuMac -configuration Debug -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO build")
+  end
+
+  desc "Build and sign macOS app (Developer ID)"
+  lane :release do
+    match(
+      type: "developer_id",
+      app_identifier: "com.ilseoblee.omodesu.mac",
+      team_id: "U48VX8D6WT"
+    )
+
+    gym(
+      project: "Omodesu.xcodeproj",
+      scheme: "OmodesuMac",
+      configuration: "Release",
+      destination: "generic/platform=macOS",
+      export_method: "developer-id",
+      output_directory: ".build/macos",
+      clean: true
+    )
+  end
+
+  desc "Notarize and staple macOS app"
+  lane :notarize do
+    release
+
+    zip_path = Dir.glob(".build/macos/*.zip").first || sh("ditto -c -k --keepParent .build/macos/Omodesu.app .build/macos/Omodesu.zip")
+
+    notarytool(
+      package: zip_path,
+      submit: true,
+      wait: true,
+      keychain_profile: "omodesu-notary"
+    )
+
+    stapler(
+      file: ".build/macos/Omodesu.app"
+    )
+  end
+end
+
+# ── Shared ───────────────────────────────────────────────────────────
+
+desc "Build gateway sidecar (run before any native build)"
+lane :sidecar do
+    sh("Scripts/build-gateway-sidecar.sh")
+end
+
+desc "Run Swift package tests"
+lane :swift_test do
+    sh("swift test --package-path Apple/Shared")
+end
+
+desc "Run Bun gateway tests"
+lane :bun_test do
+    sh("bun install --frozen-lockfile")
+    sh("bun run typecheck")
+    sh("bun test")
+end

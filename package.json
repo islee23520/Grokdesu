@@ -1,5 +1,5 @@
 {
-  "name": "omonative",
+  "name": "omodesu",
   "private": true,
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {

@@ -22,20 +22,20 @@
       },
     },
     "apps/gateway": {
-      "name": "@omonative/gateway",
+      "name": "@omodesu/gateway",
       "dependencies": {
         "@code-yeongyu/senpi-coding-agent": "workspace:*",
-        "@omonative/protocol": "workspace:*",
+        "@omodesu/protocol": "workspace:*",
       },
     },
     "apps/web": {
-      "name": "@omonative/web",
+      "name": "@omodesu/web",
       "dependencies": {
-        "@omonative/protocol": "workspace:*",
+        "@omodesu/protocol": "workspace:*",
       },
     },
     "packages/protocol": {
-      "name": "@omonative/protocol",
+      "name": "@omodesu/protocol",
     },
     "packages/senpi-session-readonly": {
       "name": "@code-yeongyu/senpi-coding-agent",
@@ -253,11 +253,11 @@
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.1.6", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" }, "peerDependencies": { "@emnapi/core": "^1.7.1", "@emnapi/runtime": "^1.7.1" } }, "sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg=="],
 
-    "@omonative/gateway": ["@omonative/gateway@workspace:apps/gateway"],
+    "@omodesu/gateway": ["@omodesu/gateway@workspace:apps/gateway"],
 
-    "@omonative/protocol": ["@omonative/protocol@workspace:packages/protocol"],
+    "@omodesu/protocol": ["@omodesu/protocol@workspace:packages/protocol"],
 
-    "@omonative/web": ["@omonative/web@workspace:apps/web"],
+    "@omodesu/web": ["@omodesu/web@workspace:apps/web"],
 
     "@oxc-project/types": ["@oxc-project/types@0.139.0", "", {}, "sha512-r9gHphtCs+1M7J0pw6Sn/hh/Wpa/iQrOOkrNAlVLF/gHq+/CJmHIWKKUUhdWjcD6CIa8idarspCsASiXCXvFUw=="],
 

@@ -12,7 +12,7 @@ async function paired(app: ReturnType<typeof createGateway>, requested = ['metad
 }
 
 test('production startup denies forged pairing requests but honors durable CLI-issued codes', async () => {
-  const dbPath = join(mkdtempSync(join(tmpdir(), 'omonative-security-')), 'control.sqlite');
+  const dbPath = join(mkdtempSync(join(tmpdir(), 'omodesu-security-')), 'control.sqlite');
   const app = createGateway({secret: 'test', dbPath, fixtures: true, peerLoopback: () => false});
   const forged = await app.fetch(new Request('http://127.0.0.1/api/v1/pairing/request', {method: 'POST', headers: {host: '127.0.0.1'}}));
   expect(forged.status).toBe(403);

@@ -1,7 +1,7 @@
 import XCTest
-@testable import OmonativeShared
+@testable import OmodesuShared
 
-final class OmonativeSharedTests: XCTestCase {
+final class OmodesuSharedTests: XCTestCase {
     func testGatewayEndpointRequiresSecureOrigin() throws {
         XCTAssertEqual(try GatewayEndpoint("https://tailnet.ts.net/").url.absoluteString, "https://tailnet.ts.net")
         XCTAssertThrowsError(try GatewayEndpoint("http://tailnet.ts.net"))
