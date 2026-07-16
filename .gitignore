@@ -12,3 +12,5 @@ DerivedData/
 *.xcresult
 *.xcarchive
 *.dSYM/
+.AuthKey_*.p8
+AuthKey_*.p8

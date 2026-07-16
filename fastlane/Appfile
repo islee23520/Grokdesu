@@ -1,4 +1,10 @@
-app_identifier("com.ilseoblee.omodesu.mac")
-app_identifier("com.ilseoblee.omodesu.ios")
+app_identifier("com.islee.omodesu.mac")
+app_identifier("com.islee.omodesu.ios")
 apple_id("ilseoblee@gmail.com")
 team_id("U48VX8D6WT")
+
+# App Store Connect API key (for CI/automated signing)
+# Set these in .env or export before running fastlane:
+# APPLE_API_KEY_ID=HQQ0WF9Q35CG
+# APPLE_API_ISSUER=<your-issuer-id-from-app-store-connect>
+# APPLE_API_KEY_PATH=./AuthKey_HQQ0WF9Q35CG.p8

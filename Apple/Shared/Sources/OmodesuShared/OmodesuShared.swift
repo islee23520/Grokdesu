@@ -20,9 +20,9 @@ public struct SSEParser: Sendable {
 }
 public final class KeychainStore: @unchecked Sendable {
  public init() {}
- public func save(_ value: String, account: String, service: String = "com.ilseoblee.omodesu") throws { SecItemDelete([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account] as CFDictionary); let status = SecItemAdd([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account, kSecValueData: Data(value.utf8)] as CFDictionary, nil); guard status == errSecSuccess else { throw GatewayError.malformedResponse } }
- public func load(account: String, service: String = "com.ilseoblee.omodesu") -> String? { var found: CFTypeRef?; guard SecItemCopyMatching([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account, kSecReturnData: true] as CFDictionary, &found) == errSecSuccess, let data = found as? Data else { return nil }; return String(data: data, encoding: .utf8) }
- public func delete(account: String, service: String = "com.ilseoblee.omodesu") { SecItemDelete([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account] as CFDictionary) }
+ public func save(_ value: String, account: String, service: String = "com.islee.omodesu") throws { SecItemDelete([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account] as CFDictionary); let status = SecItemAdd([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account, kSecValueData: Data(value.utf8)] as CFDictionary, nil); guard status == errSecSuccess else { throw GatewayError.malformedResponse } }
+ public func load(account: String, service: String = "com.islee.omodesu") -> String? { var found: CFTypeRef?; guard SecItemCopyMatching([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account, kSecReturnData: true] as CFDictionary, &found) == errSecSuccess, let data = found as? Data else { return nil }; return String(data: data, encoding: .utf8) }
+ public func delete(account: String, service: String = "com.islee.omodesu") { SecItemDelete([kSecClass: kSecClassGenericPassword, kSecAttrService: service, kSecAttrAccount: account] as CFDictionary) }
 }
 public actor APIClient {
  public static let decoder: JSONDecoder = { let decoder = JSONDecoder(); decoder.dateDecodingStrategy = .iso8601; return decoder }()

@@ -4,7 +4,7 @@
 
 ## Signing
 
-Every configuration uses automatic signing and the development team **U48VX8D6WT**. Bundle identifiers are `com.ilseoblee.omodesu.mac` and `com.ilseoblee.omodesu.ios`. The macOS build phase rejects any other team value. Use `-allowProvisioningUpdates DEVELOPMENT_TEAM=U48VX8D6WT` only with credentials belonging to that team.
+Every configuration uses automatic signing and the development team **U48VX8D6WT**. Bundle identifiers are `com.islee.omodesu.mac` and `com.islee.omodesu.ios`. The macOS build phase rejects any other team value. Use `-allowProvisioningUpdates DEVELOPMENT_TEAM=U48VX8D6WT` only with credentials belonging to that team.
 
 ## Build
 

@@ -6,7 +6,7 @@ source=app.new_file('OmodesuApp.swift'); macEnt=app.new_file('Mac.entitlements')
 mac=project.new_target(:application,'OmodesuMac',:osx,'14.0'); ios=project.new_target(:application,'OmodesuIOS',:ios,'17.0')
 [mac,ios].each do|target|
  target.add_file_references([source,package]); target.build_configurations.each do|c|
-  c.build_settings['SWIFT_VERSION']='6.0';c.build_settings['PRODUCT_BUNDLE_IDENTIFIER']=target==mac ? 'com.ilseoblee.omodesu.mac':'com.ilseoblee.omodesu.ios';c.build_settings['DEVELOPMENT_TEAM']='U48VX8D6WT';c.build_settings['CODE_SIGN_STYLE']='Automatic';c.build_settings['GENERATE_INFOPLIST_FILE']='YES';c.build_settings['INFOPLIST_KEY_CFBundleDisplayName']='Omodesu'
+  c.build_settings['SWIFT_VERSION']='6.0';c.build_settings['PRODUCT_BUNDLE_IDENTIFIER']=target==mac ? 'com.islee.omodesu.mac':'com.islee.omodesu.ios';c.build_settings['DEVELOPMENT_TEAM']='U48VX8D6WT';c.build_settings['CODE_SIGN_STYLE']='Automatic';c.build_settings['GENERATE_INFOPLIST_FILE']='YES';c.build_settings['INFOPLIST_KEY_CFBundleDisplayName']='Omodesu'
  end
 end
 mac.build_configurations.each{|c|c.build_settings['CODE_SIGN_ENTITLEMENTS']='Apple/App/Mac.entitlements';c.build_settings['ENABLE_HARDENED_RUNTIME']='YES'}

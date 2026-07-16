@@ -33,7 +33,7 @@ platform :ios do
   lane :beta do
     match(
       type: "development",
-      app_identifier: "com.ilseoblee.omodesu.ios",
+      app_identifier: "com.islee.omodesu.ios",
       team_id: "U48VX8D6WT"
     )
 
@@ -54,7 +54,7 @@ platform :ios do
     beta
 
     pilot(
-      app_identifier: "com.ilseoblee.omodesu.ios",
+      app_identifier: "com.islee.omodesu.ios",
       team_id: "U48VX8D6WT",
       skip_waiting_for_build_processing: true
     )
@@ -73,7 +73,7 @@ platform :macos do
   lane :release do
     match(
       type: "developer_id",
-      app_identifier: "com.ilseoblee.omodesu.mac",
+      app_identifier: "com.islee.omodesu.mac",
       team_id: "U48VX8D6WT"
     )
 

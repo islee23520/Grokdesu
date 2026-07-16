@@ -17,13 +17,11 @@
 
 /* Begin PBXFileReference section */
 		1253DFFF8F64966AA3CD6028 /* iOS.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
-		1284007DB6A65816940E8203 /* verify-signing.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "verify-signing.sh"; sourceTree = "<group>"; };
 		43D7CAB985B61EF1CBD31F4F /* OmodesuIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmodesuIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE5F4E8C6898ADAEC899B92 /* Mac.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Mac.entitlements; sourceTree = "<group>"; };
 		6D2C37784AEC3649A90185BD /* OmodesuApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OmodesuApp.swift; sourceTree = "<group>"; };
 		7412EBE7498A0DC0B62F65FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BE03C6F6AE8E4249FC0DCD62 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		C76D253469598556C068AE09 /* build-sidecar.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "build-sidecar.sh"; sourceTree = "<group>"; };
 		DDD38C68D15151DB082E9D4B /* OmodesuShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OmodesuShared.swift; sourceTree = "<group>"; };
 		FDD455B24F6D1F0032CD4CC0 /* OmodesuMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmodesuMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,7 +53,6 @@
 				5EE5F4E8C6898ADAEC899B92 /* Mac.entitlements */,
 				1253DFFF8F64966AA3CD6028 /* iOS.entitlements */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -68,24 +65,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BB9EADC817E9990044BE80D /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				C76D253469598556C068AE09 /* build-sidecar.sh */,
-				1284007DB6A65816940E8203 /* verify-signing.sh */,
-			);
-			name = scripts;
-			path = Apple/scripts;
-			sourceTree = "<group>";
-		};
 		7D923ADD52CC79F710C04F30 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
 				2E5BE2746B0DECC2CC60EA13 /* App */,
 				80F4478711CE5D1DC4DA60EE /* Shared */,
-				5BB9EADC817E9990044BE80D /* scripts */,
 			);
-			name = Apple;
 			path = Apple;
 			sourceTree = "<group>";
 		};
@@ -178,6 +163,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					06971FD894FF5DBAB7ADE74C = {
+						DevelopmentTeam = U48VX8D6WT;
+						ProvisioningStyle = Automatic;
+					};
+					945CA6BEFB2100BF788BFEC7 = {
+						DevelopmentTeam = U48VX8D6WT;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = D2FB575C53653B74B7ACD83B /* Build configuration list for PBXProject "Omodesu" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -188,8 +183,6 @@
 				Base,
 			);
 			mainGroup = 81862A516B678EE95EEBF608;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = CFD0BA18E20463D0F2CBA5EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -338,7 +331,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Omodesu;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omodesu.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islee.omodesu.ios;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,7 +353,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Omodesu;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omodesu.mac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islee.omodesu.mac;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
 			};
@@ -416,8 +409,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -436,7 +428,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Omodesu;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omodesu.mac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islee.omodesu.mac;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
 			};
@@ -455,7 +447,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Omodesu;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilseoblee.omodesu.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islee.omodesu.ios;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
